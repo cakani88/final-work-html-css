@@ -1,0 +1,31 @@
+@mixin borderBox($w, $h){
+    width: $w;
+    height: $h;
+}
+
+@mixin textDecoration ($ff, $fs, $lh, $tc) {
+    font-family: $ff;
+    font-size: $fs;
+    line-height: $lh;
+    color: $tc;
+}
+
+@mixin textStyle ($fs, $fw, $ta) {
+    font-style: $fs;
+    font-weight: $fw;
+    text-align: $ta;
+}
+
+@mixin buttonDecoration($br,$ls, $bC, $tD){
+    border-radius: $br;
+    letter-spacing:$ls;
+    background-color: $bC;
+    text-decoration: $tD;
+}
+
+@mixin flexboxOne($d, $w, $jc, $ai) {
+    display: flex;
+    flex-flow: $d $w;
+    justify-content: $jc;
+    align-items: $ai;
+}

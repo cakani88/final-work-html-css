@@ -1,0 +1,1331 @@
+@import 'base/base';
+@import 'base/variables';
+@import 'base/mixin';
+@import 'base/fonts';
+
+// overflow-x: hidden;
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+p {
+    color: $PtextColor;
+}
+
+.header {
+    @include flexboxOne(column, nowrap, '', center);
+    @include borderBox(100%, '940px');
+
+    .bgImage {
+        background-image: url(../Images/Background.png);
+        @include flexboxOne(column, nowrap, '', center);
+        @include borderBox(100%, 700px);
+        background-size: cover;
+        background-position: center;
+
+        .column {
+            @include flexboxOne(row, nowrap, center, center);
+            @include borderBox('', 36px);
+            margin-top: 46px;
+
+            .dreamshare {
+                // @include flexboxOne(row, nowrap, '', center);
+                @include textDecoration('Mb', 24px, 20px, $textColor);
+                @include textStyle(bold, bold, center);
+                @include borderBox(152px, 24px);
+            }
+
+            .authorise_box {
+                @include flexboxOne(row, nowrap, '', center);
+
+                .login {
+                    @include flexboxOne(column, nowrap, '', center);
+                    @include textDecoration('Mr', 14px, 17px, $textColor);
+                    @include textStyle(normal, normal, center);
+                    @include borderBox(44px, 17px);
+                    text-decoration: none;
+                    margin-left: 596px;
+                }
+
+                .sign_up {
+                    @include flexboxOne(column, '', center, center);
+                    @include textDecoration('Mr', 14px, 36px, $textColor);
+                    @include textStyle(normal, normal, center);
+                    @include borderBox(90px, 36px);
+                    @include buttonDecoration(40px, '', transparent, $textDecoration);
+                    border: 2px solid;
+                    margin-left: 13px;
+                }
+            }
+        }
+
+        .text {
+            @include flexboxOne(column, nowrap, '', center);
+            margin-top: 153px;
+            // left: 485px;
+
+            .txt1 {
+                @include textDecoration('Mb', 52px, 63px, $textColor);
+                @include textStyle(normal, bold, center);
+                @include borderBox(470px, 126px);
+                margin: auto;
+            }
+
+            .txt2 {
+                // @include flexboxOne(column, '', flex-end, center);
+                @include textDecoration('Rr', 23px, 24px, $textColor);
+                @include textStyle(normal, 300, center);
+                @include borderBox(396px, 25px);
+                margin: auto;
+                margin-top: 28.5px;
+            }
+        }
+
+        .find-button {
+            @include flexboxOne('', '', center, center);
+            @include textDecoration('Mb', 14px, 17px, $textColor);
+            @include textStyle(normal, bold, center);
+            @include borderBox(225px, 40px);
+            background-color: #FF4E50;
+            border-radius: 40px;
+            text-decoration: none;
+            margin: 45px auto;
+        }
+    }
+
+}
+
+.main {
+    @include flexboxOne(column, nowrap, center, center);
+    @include textStyle('', '', center);
+    @include borderBox(100%, '940px');
+    margin-top: 95px;
+
+    h1 {
+        @include textDecoration('Mb', 26px, 32px, $H1textColor);
+        @include textStyle(normal, bold, center);
+        @include borderBox('289px', 27px);
+    }
+
+    .section1 {
+        @include borderBox('100%', 466px);
+        position: $r;
+
+        .how_work {
+            @include flexboxOne(column, '', center, flex-end);
+
+            .image1,
+            .image2,
+            .image3 {
+                @include flexboxOne(column, '', center, flex-end);
+                @include borderBox(300px, 400px);
+                margin-top: 35px;
+                margin-bottom: 18px;
+                position: $r;
+
+                h2 {
+                    @include flexboxOne(column, '', '', baseline);
+                    @include textDecoration('Mb', 24px, 26px, $textColor);
+                    @include textStyle(normal, bold, left);
+                    @include borderBox(250px, '57px');
+                }
+
+                .step1_text {
+                    @include flexboxOne('', '', center, flex-end);
+                    @include borderBox(250px, 57px);
+                    @include textDecoration('Rr', 14px, 14px, $textColor);
+                    @include textStyle(normal, 300, left);
+                    margin-bottom: 21px;
+                    margin-top: 10px;
+                }
+            }
+
+            .image1 {
+                @include flexboxOne(column, nowrap, flex-end, center);
+                background: url(../Images/Step1.png);
+                position: $r;
+                border-radius: 4px;
+
+
+                .img_svg1 {
+                    @include flexboxOne('', '', center, center);
+                    @include borderBox(70px, 20px);
+                    @include textDecoration('Mr', 10px, 12px, $textColor);
+                    @include textStyle(normal, normal, center);
+                    @include buttonDecoration(40px, 2px, $backgroundColors, $textDecoration);
+                    left: 25px;
+                    top: 224px;
+                    position: $a;
+                    
+                }
+            }
+
+            .image2 {
+                background: url(../Images/Step2.png);
+                @include flexboxOne(column, nowrap, flex-end, center);
+                margin-left: 20px;
+                position: $r;
+                border-radius: 4px;
+
+                .img_svg2 {
+                    @include flexboxOne('', '', center, center);
+                    @include borderBox(70px, 20px);
+                    @include textDecoration('Mr', 10px, 12px, $textColor);
+                    @include textStyle(normal, normal, center);
+                    @include buttonDecoration(40px, 2px, $backgroundColors, $textDecoration);
+                    left: 25px;
+                    top: 250px;
+                    position: $a;
+                }
+            }
+
+            .image3 {
+                background: url(../Images/Step3.png);
+                @include flexboxOne(column, nowrap, flex-end, center);
+                margin-left: 20px;
+                position: $r;
+                border-radius: 4px;
+
+                .img_svg1 {
+                    @include flexboxOne('', '', center, center);
+                    @include borderBox(70px, 20px);
+                    @include textDecoration('Mr', 10px, 12px, $textColor);
+                    @include textStyle(normal, normal, center);
+                    @include buttonDecoration(40px, 2px, $backgroundColors, $textDecoration);
+                    left: 25px;
+                    top: 224px;
+                    position: $a;
+                }
+            }
+        }
+    }
+
+    .section2 {
+        @include borderBox(100%, 361px);
+        margin-top: 95px;
+
+        .meet_a_partner {
+            @include flexboxOne(column, wrap, 'center', space-around);
+
+            .meet_a_partner_faces {
+                @include flexboxOne(row, wrap, center, '');
+                position: $r;
+            }
+
+            .face1,
+            .face2,
+            .face3,
+            .face4 {
+                @include flexboxOne(column, nowrap, center, space-between);
+                @include borderBox(221px, 205px);
+                margin-top: 35px;
+
+                .face2,
+                .face3,
+                .face4 {
+                    margin-left: 19px;
+                }
+            }
+
+            .facetext {
+                @include textDecoration('Mb', 14px, 17px, $H1textColor);
+                @include textStyle(normal, bold, '');
+                margin-top: 17px;
+            }
+
+            .facetext1 {
+                @include flexboxOne(column, '', '', baseline);
+                @include textDecoration('Rr', 14px, 14px, $pTextColor);
+                @include textStyle(normal, 300, '');
+                @include borderBox(221px, 57px);
+                margin-top: 12px;
+            }
+
+            .see {
+                @include borderBox(100%, '');
+                margin-top: 48px;
+
+                .see-button {
+                    @include flexboxOne(column, wrap, center, center);
+                    @include textDecoration('Mb', 14px, 17px, $backgroundColors);
+                    @include textStyle(bold, bold, center);
+                    @include borderBox(180px, 40px);
+                    @include buttonDecoration(40px, '', $buttonBackground, $textDecoration);
+                    border: 2px solid;
+                    box-sizing: border-box;
+                    margin: auto;
+                }
+
+            }
+        }
+    }
+
+    .section3 {
+        @include flexboxOne(column, nowrap, '', '');
+        @include borderBox(940px, 1131px);
+
+        .discover_holiday {
+            margin-top: 95px;
+
+            .discover_holiday_box1 {
+                @include flexboxOne('', '', space-between, '');
+                @include borderBox(940px, 310px);
+                margin-top: 35px;
+
+                .img_box1 {
+
+                    .img_content {
+                        position: $r;
+
+                        .sport {
+                            border-radius: 4px;
+                        }
+
+                        .img_text {
+                            @include borderBox(209px, 27px);
+                            @include textDecoration('Mb', 22px, 27px, $textColor);
+                            @include textStyle(normal, bold, center);
+                            left: 46px;
+                            top: 142px;
+                            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                            position: $a;
+                        }
+                    }
+                }
+
+                .img_box2 {
+
+                    .img_content {
+                        position: $r;
+
+                        .health {
+                            border-radius: 4px;
+                        }
+
+                        .img_text {
+                            @include borderBox(238px, 27px);
+                            @include textDecoration('Mb', 22px, 27px, $textColor);
+                            @include textStyle(normal, bold, center);
+                            left: 31px;
+                            top: 142px;
+                            position: $a;
+                        }
+                    }
+                }
+
+                .img_box3 {
+                    .img_content {
+                        position: $r;
+
+                        .extreme {
+                            border-radius: 4px;
+                        }
+
+                        .img_text {
+                            @include borderBox(209px, 27px);
+                            @include textDecoration('Mb', 22px, 27px, $textColor);
+                            @include textStyle(normal, bold, center);
+                            left: 46px;
+                            top: 128px;
+                            position: $a;
+                        }
+                    }
+                }
+            }
+
+            .discover_holiday_box2 {
+                @include flexboxOne('', '', space-between, '');
+                @include borderBox(940px, 310px);
+                margin-top: 20px;
+
+                .img_box4 {
+                    position: $r;
+
+                    .img_content {
+                        
+                        .games {
+                            border-radius: 4px;
+                        }
+                    }
+
+                    .img_text {
+                        @include flexboxOne('', '', flex-end, center);
+                        @include borderBox(80px, 27px);
+                        @include textDecoration('Mb', 22px, 27px, $textColor);
+                        @include textStyle(normal, bold, center);
+                        left: 110px;
+                        top: 142px;
+                        position: $a;
+                    }
+                }
+            }
+
+            .img_box5 {
+
+                .img_content {
+                    position: $r;
+
+                    .culture {
+                        border-radius: 4px;
+                    }
+
+                    .img_text {
+                        @include borderBox(261px, 27px);
+                        @include textDecoration('Mb', 22px, 27px, $textColor);
+                        @include textStyle(normal, bold, center);
+                        left: 180px;
+                        top: 142px;
+                        position: $a;
+                    }
+                }
+            }
+        }
+
+        .discover_holiday_box3 {
+            @include flexboxOne('', '', space-between, '');
+            @include borderBox(940px, 310px);
+            margin-top: 20px;
+
+            .img_box6 {
+                .img_content {
+                    position: $r;
+
+                    .enjomet {
+                        border-radius: 4px;
+                    }
+
+                    .img_text {
+                        @include borderBox(261, 27px);
+                        @include textDecoration('Mb', 22px, 27px, $textColor);
+                        @include textStyle(normal, bold, center);
+                        left: 180px;
+                        top: 142px;
+                        position: $a;
+                    }
+                }
+            }
+
+            .img_box7 {
+                .img_content {
+                    position: $r;
+
+                    .trevelling {
+                        border-radius: 4px;
+                        object-fit: cover;
+                    }
+
+                    .img_text {
+                        @include borderBox(114px, 27px);
+                        @include textDecoration('Mb', 22px, 27px, $textColor);
+                        @include textStyle(normal, bold, center);
+                        left: 92.5px;
+                        top: 142px;
+                        position: $a;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.section4 {
+    @include borderBox(940px, 258px);
+
+
+    .create_your_holiday {
+        @include flexboxOne(column, nowrap, '', center);
+        @include borderBox(482px, 158px);
+        margin: auto;
+        margin-top: 95px;
+
+        .create_your_holiday_text {
+            @include textDecoration('Rn', 18px, 14px, $pTextColor);
+            @include textStyle(bold, 300, center);
+            @include borderBox(415px, 24px);
+            margin-top: 43px;
+
+        }
+
+        .input-searsh {
+            @include flexboxOne('', '', space-around, '');
+            @include borderBox(482px, 40px);
+            margin-top: 25px;
+
+        }
+
+        input {
+            @include borderBox(299px, 40px);
+            padding-left: 10px;
+            margin-left: 10px;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.073313);
+            border-radius: 3px;
+        }
+
+        .searsh-button {
+            @include flexboxOne(row, nowrap, center, center);
+            @include textDecoration('Mb', 14px, 17px, $textColor);
+            @include textStyle(normal, bold, center);
+            @include borderBox(172.12px, 40px);
+            @include buttonDecoration(40px, '', $backgroundColors, $textDecoration);
+            border: 2px solid #FF4E50;
+            box-sizing: border-box;
+            margin-left: 10px;
+        }
+    }
+}
+
+
+.hr {
+    border-top: 2px solid $backgroundColors;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.footer {
+    @include flexboxOne(row, wrap, center, space-around);
+    @include borderBox(100%, 224px);
+    margin-bottom: 36px;
+
+    .footerbox {
+        @include flexboxOne(row, '', center, '');
+        @include borderBox(941px, 224px);
+
+        .dreamsharebottom {
+            @include textDecoration('Mb', 16px, 20px, $backgroundColors);
+            @include textStyle(normal, normal, center);
+            @include borderBox(119px, 20px);
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            margin-top: 38px;
+        }
+
+        .company {
+            @include flexboxOne(column, nowrap, '', space-around);
+            @include textDecoration('Mb', 14px, 17px, $H1textColor);
+            @include textStyle(normal, bold, center);
+            @include borderBox(70px, 17px);
+            margin-left: 122px;
+            margin-top: 40px;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        }
+
+        .company_about {
+            margin-top: 11px;
+            @include borderBox(114px, 156px);
+
+            .link {
+                @include flexboxOne(column, '', '', '');
+                @include textDecoration('Rr', 14px, 26px, $linkColor);
+                @include textStyle(normal, 300, left);
+                text-decoration: $textDecoration;
+            }
+        }
+
+        .partners {
+            @include textDecoration('Mb', 14px, 17px, $H1textColor);
+            @include textStyle(normal, bold, center);
+            @include borderBox(64px, 17px);
+            margin-left: 169px;
+            margin-top: 40px;
+        }
+
+        .designed {
+            @include flexboxOne(row, wrap, center, '');
+            @include borderBox(110px, 24px);
+            margin-left: 315px;
+            margin-top: 38px;
+
+            .aretoimg {
+                margin-top: 7px;
+                margin-left: -25px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 960px) {
+
+    .header {
+        @include borderBox(100%, '700px');
+
+        .bgImage {
+
+            .column {
+                margin-top: 46px;
+
+                .authorise_box {
+
+                    .login {
+
+                        margin-left: 365px;
+                    }
+
+                    .sign_up {
+                        @include flexboxOne('', '', center, center);
+                        margin-left: 19px;
+                    }
+                }
+            }
+
+            .text {
+                margin-top: 153.5px;
+
+                .txt2 {
+                    margin-top: 28.5px;
+                }
+            }
+
+        }
+    }
+
+    .main {
+        @include borderBox(748px, '400px');
+        margin: auto;
+        margin-top: 95px;
+
+        .section1 {
+            @include borderBox(748px, 466px);
+
+            .how_work {
+                @include flexboxOne(row, nowrap, 'center', 'flex-end');
+
+                .image1,
+                .image2,
+                .image3 {
+                    @include borderBox(236px, 400px);
+
+                    h2 {
+                        @include textDecoration('Mb', 24px, 14px, $textColor);
+                        @include borderBox(196px, '57px');
+                    }
+
+                    .step1_text {
+                        @include borderBox(196px, '76px');
+                        margin-bottom: 16px;
+                        margin-top: 10px;
+                    }
+                }
+
+                .image1 {
+                    margin-left: 10px;
+
+                    .img_svg1 {
+                        left: 20px;
+                        top: 210px;
+                    }
+                }
+
+                .image2 {
+
+                    .img_svg2 {
+                        left: 20px;
+                        top: 255px;
+                    }
+                }
+
+                .image3 {
+                    margin-left: 20px;
+                    margin-right: 10px;
+                    position: $r;
+
+                    .img_svg1 {
+                        @include flexboxOne('', '', center, center);
+                        left: 25px;
+                        top: 210px;
+                    }
+
+                    .step1_text1 {
+                        @include borderBox(196px, '57px');
+                        position: $a;
+                        margin-top: 17px;
+                        top: 289px;
+                    }
+                }
+            }
+        }
+
+        .section2 {
+            @include borderBox(492px, 605px);
+            margin-top: 35px;
+
+            .meet_a_partner {
+                @include flexboxOne(row, wrap, center, '');
+
+                .face1,
+                .face2,
+                .face3,
+                .face4 {
+                    @include borderBox(236px, 205px);
+
+                    .face2,
+                    .face3,
+                    .face4 {
+                        margin-left: 20px;
+                    }
+                }
+
+                .facetext1 {
+                    @include borderBox(236px, 38px);
+                }
+
+                .see {
+
+                    .see-button {
+                        margin-top: 40px;
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+
+        .section3 {
+            @include borderBox(748px, 1031px);
+
+            .discover_holiday {
+
+                .discover_holiday_box1 {
+                    @include borderBox(748px, 310px);
+
+                    .img_box1 {
+                        @include borderBox(236px, 310px);
+
+                        .img_content {
+
+                            .sport {
+                                @include borderBox(236px, 310px);
+                                object-fit: cover;
+                            }
+
+                            .img_text {
+                                @include borderBox(206px, 54px);
+                                left: 15px;
+                                top: 128px;
+                            }
+                        }
+                    }
+
+                    .img_box2 {
+                        @include borderBox(236px, 310px);
+
+                        .img_content {
+
+                            .health {
+                                @include borderBox(236px, 310px);
+                                object-fit: cover;
+                            }
+
+                            .img_text {
+                                @include borderBox(206px, 54px);
+
+                                left: 15px;
+                                top: 128px;
+                            }
+                        }
+                    }
+
+                    .img_box3 {
+                        @include borderBox(236px, 310px);
+
+                        .img_content {
+
+                            .extreme {
+                                @include borderBox(236px, 310px);
+                                object-fit: cover;
+                            }
+
+                            .img_text {
+                                @include borderBox(206px, 54px);
+                                left: 15px;
+                                top: 128px;
+                            }
+                        }
+                    }
+                }
+
+                .discover_holiday_box2 {
+                    @include borderBox(748px, 310px);
+                    // margin-top: 20px;
+
+                    .img_box4 {
+                        @include borderBox(236px, 310px);
+
+                        .img_content {
+
+                            .games {
+                                @include borderBox(236px, 310px);
+                                object-fit: cover;
+                            }
+
+                            .img_text {
+                                @include borderBox(206px, 27px);
+                                left: -45px;
+                                top: 142px;
+                            }
+                        }
+                    }
+
+                    .img_box5 {
+                        @include borderBox(492px, 310px);
+
+                        .img_content {
+
+                            .culture {
+                                @include borderBox(492px, 310px);
+                                object-fit: cover;
+                            }
+
+                            .img_text {
+                                left: 116px;
+                                top: 142px;
+
+                            }
+                        }
+                    }
+                }
+
+                .discover_holiday_box3 {
+                    @include borderBox(748px, 310px);
+
+                    .img_box6 {
+                        @include borderBox(492px, 310px);
+
+                        .img_content {
+
+                            .enjomet {
+                                @include borderBox(492px, 310px);
+                                object-fit: cover;
+                            }
+
+                            .img_text {
+                                @include borderBox(222, 27px);
+                                left: 108px;
+                                top: 142px;
+                            }
+                        }
+                    }
+
+                    .img_box7 {
+                        @include borderBox(236px, 310px);
+
+                        .img_content {
+
+                            .trevelling {
+                                @include borderBox(236px, 310px);
+                                object-fit: cover;
+                            }
+
+                            .img_text {
+                                @include borderBox(206px, 27px);
+                                left: 15px;
+                                top: 142px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .section4 {
+            @include borderBox(482px, 258px);
+            margin-top: 95px;
+        }
+    }
+
+    .footer {
+        @include borderBox(100%, 224px);
+
+        .footerbox {
+            @include borderBox(768px, '224px');
+
+            // .dreamsharebottom {
+
+            //     margin-left: 39px;
+            // }
+
+            .company {
+                margin-left: 108px;
+
+            }
+
+            .partners {
+                margin-left: 100px;
+            }
+
+            .designed {
+                @include borderBox(113px, 43px);
+                margin-left: 148px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 320px) {
+
+    .header {
+        @include borderBox(100%, 540px);
+
+        .bgImage {
+            @include borderBox(100%, 100%);
+
+            .column {
+                @include flexboxOne(column-reverse, nowrap, '', 'center');
+                @include borderBox('153px', 60px);
+                margin: 0px;
+                margin-top: 20px;
+
+                .authorise_box {
+                    // @include flexboxOne(column, wrap, center, space-around);
+                    @include borderBox(153px, 36px);
+                    // margin: 0px;
+
+                    .login {
+                        margin: 0px;
+                    }
+                }
+
+                .dreamshare {
+                    // @include flexboxOne(column, '', '', baseline);
+                    margin: 0px;
+
+                    .dreamshare {
+                        margin: 0px;
+                        margin-top: 97px;
+                        margin-left: -15px;
+                    }
+                }
+            }
+
+            .text {
+                @include flexboxOne(row, wrap, '', '');
+                @include borderBox(280px, 128.5px);
+
+                .txt1 {
+                    @include borderBox(272px, 74px);
+                    @include textDecoration('Mb', 30px, 37px, $textColor);
+                }
+
+                .txt2 {
+                    // @include flexboxOne(row, wrap, flex-end, center);
+                    @include textDecoration('Rr', 18px, 24px, $textColor);
+                    margin-top: 5.5px;
+                }
+            }
+
+            .find-button {
+                @include borderBox(280px, 40px);
+            }
+        }
+    }
+
+    .main {
+        @include borderBox('100%', '100%');
+        margin: auto;
+
+        h1 {
+            @include textDecoration('Mb', 22px, 27px, $H1textColor);
+            margin: 0px;
+            margin-top: 34px;
+        }
+
+        .section1 {
+            @include borderBox(300px, 835px);
+
+            .how_work {
+                @include flexboxOne(column, nowrap, center, '');
+
+                .image1,
+                .image2,
+                .image3 {
+                    @include borderBox('400px', 240px);
+                    margin: 0px;
+
+                    h2 {
+                        @include borderBox(250px, '58px');
+                        @include textDecoration('Mb', 24px, 14px, $textColor);
+                        margin-left: -10px;
+
+                    }
+
+                    .step1_text {
+                        margin: 0px;
+                        margin-bottom: 16px;
+                        margin-left: -10px;
+                    }
+                }
+
+                .image1 {
+                    margin-top: 15px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+
+                    .img_svg1 {
+                        left: 20px;
+                        top: 69px;
+                    }
+                }
+
+                .image2 {
+                    margin-top: 10px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+
+                    .img_svg2 {
+                        left: 20px;
+                        top: 95px;
+                        position: $a;
+                    }
+                }
+
+                .image3 {
+
+                    margin-top: 10px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+
+                    .img_svg1 {
+                        left: 20px;
+                        top: 69px;
+                        position: $a;
+                    }
+
+                    .step1_text1 {
+                        @include borderBox(196px, 57px);
+                        position: $a;
+                        margin-top: 10px;
+                        top: 289px;
+                    }
+                }
+            }
+        }
+
+        .section2 {
+            @include borderBox(300px, 920px);
+            @include flexboxOne(column, wrap, center, flex-end);
+            margin-top: 35px;
+
+            .meet_a_partner {
+                @include flexboxOne(column, wrap, center, center);
+                @include borderBox('300px', '887px');
+                position: $a;
+                margin-top: 35px;
+
+                h1 {
+                    @include borderBox(280px, 40px);
+                    margin-top: 0px;
+                }
+
+                .meet_a_partner_faces {
+                    @include borderBox(236px, 963px);
+
+                    .face1 {
+                        margin-top: 14px;
+                    }
+
+                    .face2,
+                    .face3,
+                    .face4 {
+                        @include borderBox(236px, 205px);
+                        margin-top: 16px;
+                    }
+                }
+
+                .facetext1 {
+                    @include borderBox(236px, 38px);
+                }
+
+                .see {
+                    margin-top: 36px;
+
+                    .see-button {
+                        @include borderBox(280px, 40px);
+                        margin-left: auto;
+                    }
+
+                }
+            }
+        }
+
+        .section3 {
+            @include borderBox(300px, 1056px);
+            margin-top: 46px;
+
+            h1 {
+                @include borderBox(280px, 54px);
+                margin-top: 0px;
+            }
+
+            .discover_holiday {
+                @include borderBox('300px', '994px');
+                // margin-top: 46px;
+
+                .discover_holiday_box1 {
+                    @include flexboxOne(column, nowrap, center, center);
+                    @include borderBox(300px, 360px);
+
+                    .img_box1 {
+
+                        .img_content {
+                            @include borderBox(300px, 120px);
+                            margin-top: 10px;
+
+                            .sport {
+                                @include borderBox(300px, 120px);
+                                object-fit: cover;
+                                object-position: center;
+                            }
+
+                            .img_text {
+                                @include borderBox(206px, 54px);
+                                left: 47px;
+                                top: 30px;
+                            }
+                        }
+                    }
+
+                    .img_box2 {
+
+                        .img_content {
+                            @include borderBox(300px, 120px);
+
+
+                            .health {
+                                @include borderBox(300px, 120px);
+                                object-fit: cover;
+                                object-position: center;
+                                margin-top: 10px;
+                            }
+
+                            .img_text {
+                                @include borderBox(206px, 54px);
+                                left: 40px;
+                                top: 45px;
+
+                            }
+                        }
+                    }
+
+                    .img_box3 {
+
+                        .img_content {
+                            @include borderBox(300px, 120px);
+                            margin-top: 10px;
+
+                            .extreme {
+                                @include borderBox(300px, 120px);
+                                object-fit: cover;
+                                object-position: 0px -50px;
+                                margin-top: 10px;
+                            }
+
+                            .img_text {
+                                left: 47px;
+                                top: 40px;
+                            }
+
+                        }
+                    }
+                }
+
+                .discover_holiday_box2 {
+                    @include flexboxOne(column, nowrap, center, center);
+                    @include borderBox(300px, 240px);
+
+                    .img_box4 {
+
+                        .img_content {
+                            @include borderBox(300px, 120px);
+                            margin-top: 10px;
+
+                            .games {
+                                @include borderBox(300px, 120px);
+                                object-fit: cover;
+                                object-position: center;
+                                margin-top: 10px;
+                            }
+
+                            .img_text {
+                                left: 110px;
+                                top: 55px;
+                            }
+                        }
+                    }
+
+                    .img_box5 {
+
+                        .img_content {
+                            @include borderBox(300px, 120px);
+                            margin-top: 10px;
+
+                            .culture {
+                                @include borderBox(300px, 120px);
+                                object-fit: cover;
+                                object-position: 0px -20px;
+                                margin-top: 10px;
+                            }
+
+                            .img_text {
+                                left: 20px;
+                                top: 55px;
+                            }
+                        }
+                    }
+                }
+
+                .discover_holiday_box3 {
+                    @include flexboxOne(column, nowrap, center, center);
+                    @include borderBox(300px, 240px);
+
+                    .img_box6 {
+
+                        .img_content {
+                            @include borderBox(300px, 120px);
+                            margin-top: 10px;
+
+                            .enjomet {
+                                @include borderBox(300px, 120px);
+                                object-fit: cover;
+                                object-position: center;
+                                margin-top: 10px;
+                            }
+
+                            .img_text {
+                                left: 12px;
+                                top: 55px;
+                            }
+                        }
+                    }
+
+                    .img_box7 {
+
+                        .img_content {
+                            @include borderBox(300px, 120px);
+                            margin-top: 10px;
+
+                            .trevelling {
+
+                                @include borderBox(300px, 120px);
+                                object-fit: cover;
+                                background-repeat: no-repeat;
+                                object-position: 0px -25px;
+                                margin-top: 10px;
+                            }
+
+                            .img_text {
+                                left: 100px;
+                                top: 55px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .section4 {
+            @include borderBox(280px, 226px);
+
+            h1 {
+                @include borderBox(280px, 54px);
+                margin-top: 0px;
+                margin: auto;
+            }
+
+            .create_your_holiday {
+                @include flexboxOne(row, wrap, '', center);
+                @include borderBox(280px, 54px);
+                margin-top: 35px;
+
+                .create_your_holiday_text {
+                    margin-top: 9px;
+                }
+
+                .input-searsh {
+                    @include flexboxOne(column, nowrap, space-around, '');
+                    @include borderBox(280px, 90px);
+                    margin-top: 15px;
+
+                }
+
+                input {
+                    @include borderBox(280px, 40px);
+                    margin: 0px;
+
+                }
+
+                .searsh-button {
+                    @include borderBox(280px, 40px);
+                    margin: 0px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .hr {
+        margin-top: 40px;
+    }
+
+    .footer {
+        @include flexboxOne(column, wrap, '', center);
+        @include borderBox(100%, 100%);
+        margin-bottom: 22px;
+
+        .footerbox {
+            @include flexboxOne(column, wrap, center, center);
+            @include borderBox(320px, 204px);
+
+            .dreamsharebottom {
+                margin: 0px;
+                margin-top: 19px;
+            }
+
+            .company {
+                @include borderBox(188px, 70px);
+                margin: 0px;
+                margin-top: 13px;
+
+                .company_about {
+                    @include flexboxOne(column, wrap, center, center);
+                    @include borderBox(188px, 52px);
+                    margin-top: 1px;
+
+
+
+                    .nav {
+                        @include flexboxOne(row, wrap, center, center);
+                        @include borderBox(188px, 52px);
+                        @include textStyle(normal, 300, center);
+
+                        .link {
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+
+            .partners {
+                margin: 0px;
+                margin-top: 6px;
+            }
+
+            .designed {
+                margin: 0px;
+                margin-top: 14px;
+
+                .aretoimg {
+                    margin: 0px;
+                }
+            }
+        }
+    }
+}
